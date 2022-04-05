@@ -10,7 +10,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play()
 	console.log("The current volume is " + video.volume)
-	this.document.querySelector("#volume").innerHTML = video.volume * 100 + "%"
+	document.querySelector("#volume").innerHTML = video.volume * 100 + "%"
  });
 
 document.querySelector("#pause").addEventListener("click", function() {
