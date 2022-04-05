@@ -4,13 +4,13 @@ window.addEventListener("load", function() {
 	console.log("Good job opening the window")
 	video.autoplay = false
 	video.loop = false
-	console.log("The current volume is " + video.volume)
-	this.document.querySelector("#volume").innerHTML = video.volume * 100 + "%"
 });
 
 document.querySelector("#play").addEventListener("click", function() {
-console.log("Play Video");
-video.play()
+	console.log("Play Video");
+	video.play()
+	console.log("The current volume is " + video.volume)
+	this.document.querySelector("#volume").innerHTML = video.volume * 100 + "%"
  });
 
 document.querySelector("#pause").addEventListener("click", function() {
@@ -31,9 +31,8 @@ document.querySelector("#faster").addEventListener("click", function() {
 	 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	rn = video.currentTime
-	console.log("Current location is " + rn)
-	if (video.duration - video.duration > 15) {
+	console.log("Current location is " + video.currentTime)
+	if (video.duration - video.currentTime > 15) {
 		video.currentTime += 15
 	}
 	else{
